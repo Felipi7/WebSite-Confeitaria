@@ -1,0 +1,314 @@
+<!--FELIPE SABINO COTA-->
+<!--RA 2023006170-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Delicias da Cris</title>
+   <meta name="keywords" content="Delícias da Cris, bolos, doces, encomendas, confeitaria, Belo Horizonte, MG">
+   <meta name="description"
+      content="Confeitaria Delícias da Cris oferece bolos, doces e trufas artesanais em Belo Horizonte, MG. Faça seu pedido online!">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="shortcut icon" href="./Imagens/LogoCris.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <script src="./script.js"></script>
+</head>
+
+<body style="background-color:#F8F9FA;">
+
+   <!--MENU SITE -->
+
+   <header>
+      <nav class="nav-bar">
+         <a href="./index.html">
+            <div class="logo">
+               <img class="nav-logo" src="./Imagens/LogoCris.png" alt="">
+            </div>
+         </a>
+         <div class="nav-list">
+            <ul>
+               <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
+               <li class="nav-item"><a href="#monte-seu-pedido" class="nav-link">Pedidos</a></li>
+               <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+               <li class="nav-item"><a href="#s4" class="nav-link">Contato</a></li>
+            </ul>
+         </div>
+         <a target="_blank" href="./pedidos.html">
+            <div class="pageCompras">
+               <img class="bag" src="./Imagens/bag.png" alt="">
+            </div>
+         </a>
+         <!--MENU MOBILE-->
+         <div class="mobile-menu-icon">
+            <button onclick="mostrarMenu()"><img class="icon" src="./Imagens/icons8-menu-button.svg" alt></button>
+         </div>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+         <ul>
+            <li class="nav-item"><a href="#produtos" class="nav-link" onclick="closeMobileMenu()">Produtos</a></li>
+            <li class="nav-item"><a href="#pedidoCliente" class="nav-link" onclick="closeMobileMenu()">Pedidos</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link" onclick="closeMobileMenu()">Sobre</a></li>
+            <li class="nav-item"><a href="#s4" class="nav-link" onclick="closeMobileMenu()">Contato</a></li>
+         </ul>
+      </div>
+   </header>
+
+   <!--BANNER PRINCIPAL SITE DELICIAS DA CRIS -->
+   <a href="./index.html">
+      <div id="banner">
+         <img src="./Imagens/BannerPrincipal1.jpg" alt="Banner">
+      </div>
+   </a>
+
+
+   <!--FORMULARIO PEDIDOS-->
+
+   <section class="pedido-section">
+      <div class="forms" id="pedidoCliente">
+         <h2>Monte seu Pedido!</h2>
+         <form class="pedido-forms">
+            <div class="itens">
+               <label for="produto">Produto:</label>
+               <input placeholder="Ex: Trufa, Bolo Recheado, Barra de Chocolate..." type="text" id="produto"
+                  name="produto" required>
+            </div>
+            <div class="itens">
+               <label for="bolo">Bolo:</label>
+               <input placeholder="Ex: Chocolate, Laranja..." type="text" id="bolo" name="bolo" required>
+            </div>
+            <div class="itens">
+               <label for="recheio">Recheio:</label>
+               <input placeholder="Ex: Ninho com Morango..." type="text" id="recheio" name="recheio" required>
+            </div>
+            <div class="itens">
+               <label for="tamanho">Tamanho:</label>
+               <input placeholder="Ex: Pequeno, Médio, Grande..." type="text" id="tamanho" name="tamanho" required>
+            </div>
+            <div class="itens">
+               <label for="pagamento">Métodos de Pagamento:</label>
+               <input placeholder="Ex: Pix, Dinheiro, Cartão..." type="text" id="pagamento" name="pagamento" required>
+            </div>
+            <div class="itens">
+               <label for="observacoes">Observações:</label>
+               <textarea placeholder="Preencha seu Nome, Telefone, Endereço..." id="observacoes"
+                  name="observacoes"></textarea>
+            </div>
+            <div class="itens">
+               <button class="button_forms" type="submit" style="border-radius: 20px;" onclick="dadosCliente()">Enviar
+                  Pedido</button>
+            </div>
+         </form>
+      </div>
+   </section>
+
+   <!-- GRID PRODUTOS-->
+
+   <section id="produtos" class="produtos-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <h2 id="Bolos_Recheados">Bolos Recheados</h2>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo1.svg" alt="Produto 1">
+               <h4>Bolo Mesclado</h4>
+               <p>Cobertura de Chocolate</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo2.svg" alt="Produto 2">
+               <h4>Bolo de Cenoura</h4>
+               <p>Cobertura de Chocolate</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo3.svg" alt="Produto 3">
+               <h4>Bolo de Chocolate</h4>
+               <p>Cobertura de Chocolate</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo4.svg" alt="Produto 4">
+               <h4>Bolo de Laranja</h4>
+               <p>Cobertura de Laranja</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-12 text-center">
+               <h2 id="Bolos_Caseiros">Bolos Caseiros</h2>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo5.svg" alt="Produto 12">
+               <h4>Broa de Fuba</h4>
+               <p>Bolos Caseiros</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo6.svg" alt="Produto 12">
+               <h4>Bolo de Milho</h4>
+               <p>Bolos Caseiros</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo7.svg" alt="Produto 12">
+               <h4>Bolo de Laranja</h4>
+               <p>Bolos Caseiros</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Bolo8.svg" alt="Produto 12">
+               <h4>Bolo de Cenoura</h4>
+               <p>Bolos Caseiros</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-12 text-center">
+               <h2 id="Trufas">Trufas</h2>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Trufa1.svg" alt="Produto 5">
+               <h4>Trufa de Chocolate</h4>
+               <p>Recheio de <br>Brigadeiro</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Trufa2.svg" alt="Produto 6">
+               <h4>Trufa de Chocolate</h4>
+               <p>Recheio de <br> Limão</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Trufa3.svg" alt="Produto 7">
+               <h4>Trufa de Chocolate</h4>
+               <p>Recheio de <br> Coco</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Trufa4.svg" alt="Produto 8">
+               <h4>Trufa de Chocolate</h4>
+               <p>Recheio de <br> Morango</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-12 text-center">
+               <h2 id="Itens_Tematicos">Itens Temáticos</h2>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Tema1.svg" alt="Produto 9">
+               <h4>Prank Ovo</h4>
+               <p>Mimos funny <br> Páscoa</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Tema2.svg" alt="Produto 10">
+               <h4>Dois Amores</h4>
+               <p>Brigadeiro e <br> Ninho</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Tema3.svg" alt="Produto 11">
+               <h4>Pop It</h4>
+               <p>Barra de <br>Chocolate</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+            <div class="col-md-3 col-sm-6">
+               <img src="./Imagens/Tema4.svg" alt="Produto 12">
+               <h4> Brownie</h4>
+               <p>Árvore de <br> Chocolate</p>
+               <button class="btn btn-primary" onclick="window.location.href = './pedidos.html';">Comprar</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--SOBRE NOS-->
+
+   <section id="about" class="sobre-section">
+      <div class="sobre-container">
+         <div class="sobre-item">
+            <h3>Nossa História</h3>
+            <p>A história da <span>Delícias da Cris</span> remonta a 2020, quando sua fundadora,<span> Cristina
+                  Cota</span> , tomou a decisão corajosa de compartilhar as preciosas receitas de sua família com o
+               mundo. O que inicialmente era apenas uma modesta confeitaria caseira logo floresceu em um próspero
+               empreendimento, à medida que a reputação dos deliciosos bolos da Cris se espalhava.</p>
+         </div>
+         <div class="sobre-item">
+            <h3>Nossa Missão</h3>
+            <p>Nossa <span>missão na Delícias da Cris</span> é criar bolos e doces excepcionais que tragam
+               <span>alegria, satisfação e momentos memoráveis</span> aos nossos clientes. Estamos totalmente
+               comprometidos em utilizar somente os mais finos e frescos ingredientes, combinados com técnicas
+               artesanais cuidadosamente aprimoradas e uma <span> dose generosa de amor genuíno em cada produto.</span>
+            </p>
+         </div>
+      </div>
+      <a style="text-decoration: none;" target="_blank" href="./explicacao.html">
+         <div id="projeto_expli">
+            <button class="button_expli" style="border-radius: 20px;">Explicação do Projeto</button>
+         </div>
+      </a>
+
+   </section>
+
+
+   <!--RODAPE-->
+
+   <section id="s4">
+      <div id="sub-rodape">
+         <p>&copy; 2024 Delícias da Cris. Todos os direitos reservados.
+         </p>
+      </div>
+      <footer>
+         <div class="container-footer">
+            <div class="footer-linha">
+               <div class="footer-coluna">
+                  <h4>Contato</h4>
+                  <ul>
+                     <li><a href="https://wa.link/01f0zm"> +55 (31) 98507-8167 </a></li>
+                     <li><a id="endereco"> Endereço </a></li>
+                     <li><a href=""> Rua José Augusto Silva </a></li>
+                     <li><a href=""> Céu Azul - Belo Horizonte- MG</a></li>
+                  </ul>
+               </div>
+               <div class="footer-coluna">
+                  <h4>Obter ajuda</h4>
+                  <ul>
+                     <li><a href="./pedidos.html">FAQ</a></li>
+                     <li><a href="./pedidos.html">Devoluções</a></li>
+                     <li><a href="./pedidos.html">Status De Pedido</a></li>
+                     <li><a href="./pedidos.html">Opções De Pagamento</a></li>
+                  </ul>
+               </div>
+               <div class="footer-coluna">
+                  <h4>Delícias da Cris</h4>
+                  <ul>
+                     <li><a href="#Bolos_Recheados">Bolos Recheados</a></li>
+                     <li><a href="#Bolos_Caseiros">Bolos Caseiros</a></li>
+                     <li><a href="#Trufas">Trufas Recheadas</a></li>
+                     <li><a href="#Itens_Tematicos">Itens Temáticos</a></li>
+                  </ul>
+               </div>
+               <div class="footer-coluna">
+                  <h4>Novidades Delícias da Cris</h4>
+                  <div class="form-sub">
+                     <form>
+                        <input id="emailCliente" type="email" placeholder="Digite o seu e-mail" required>
+                        <button id="btn_footer" type="button" onclick="inscricaoCliente()">Inscrever</button>
+                     </form>
+                  </div>
+                  <div class="medias-socias">
+                     <a target="_blank" href="https://wa.link/01f0zm"><i class="bi bi-whatsapp"></i></a>
+                     <a target="_blank" href="https://www.instagram.com/deliciasdacris_bh?igsh=MTc0NWt5bHlkZWg1cw=="><i
+                           class="bi bi-instagram"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </section>
+
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
